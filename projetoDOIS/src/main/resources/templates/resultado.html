@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+    <body>
+        <h1>Hello World! Estamos na página de resultados</h1>
+        <br>Voce escolheu: <span th:text="${aEscolha}"> </span>
+        <br>O resultado de sua escolha foi: <span th:text="${saida}"> </span>
+
+        <br><h3>Placar Geral:</h3>
+        <ul>
+            <!-- Itera sobre a lista placar -->
+            <th:block th:each="score : ${placar}">
+                <li>Vitórias: <span th:text="${score.vitorias}"></span>,
+                    Derrotas: <span th:text="${score.derrotas}"></span>,
+                    Empates: <span th:text="${score.empates}"></span>
+                </li>
+            </th:block>
+        </ul>
+    </body>
+</html>
